@@ -1,19 +1,117 @@
 [
   {
-    "name": "svozov",
-    "height": 120,
+    "id": 3,
+    "name": "shekotryas",
     "coordinates": {
-      "x": 52,
-      "y": 52
+      "x": -777,
+      "y": -66
     },
-    "EyeColor": "BROWN",
-    "hairColor": "BLACK",
-    "country": "FRANCE",
+    "creationDate": {
+      "dateTime": {
+        "date": {
+          "year": 2025,
+          "month": 2,
+          "day": 26
+        },
+        "time": {
+          "hour": 10,
+          "minute": 57,
+          "second": 30,
+          "nano": 24009100
+        }
+      },
+      "offset": {
+        "totalSeconds": 10800
+      },
+      "zone": {
+        "id": "Europe/Moscow"
+      }
+    },
+    "height": 150.0,
+    "eyeColor": "BLUE",
+    "hairColor": "BROWN",
+    "nationality": "THAILAND",
     "location": {
-      "x": 54,
-      "y": 2025,
-      "z": 52,
-      "name": "aaa"
+      "x": 973.0,
+      "y": 835,
+      "z": 83838383,
+      "name": "hhh"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Artem",
+    "coordinates": {
+      "x": 34,
+      "y": 432
+    },
+    "creationDate": {
+      "dateTime": {
+        "date": {
+          "year": 2025,
+          "month": 2,
+          "day": 26
+        },
+        "time": {
+          "hour": 10,
+          "minute": 54,
+          "second": 13,
+          "nano": 147078500
+        }
+      },
+      "offset": {
+        "totalSeconds": 10800
+      },
+      "zone": {
+        "id": "Europe/Moscow"
+      }
+    },
+    "height": 180.0,
+    "eyeColor": "BLUE",
+    "hairColor": "BROWN",
+    "nationality": "SPAIN",
+    "location": {
+      "x": 32.5,
+      "y": 234545,
+      "z": 341,
+      "name": "fdvsc"
+    }
+  },
+  {
+    "id": 4,
+    "name": "vitalik",
+    "coordinates": {
+      "x": 33,
+      "y": 13
+    },
+    "creationDate": {
+      "dateTime": {
+        "date": {
+          "year": 2025,
+          "month": 2,
+          "day": 26
+        },
+        "time": {
+          "hour": 10,
+          "minute": 54,
+          "second": 13,
+          "nano": 236137100
+        }
+      },
+      "offset": {
+        "totalSeconds": 10800
+      },
+      "zone": {
+        "id": "Europe/Moscow"
+      }
+    },
+    "height": 150.0,
+    "hairColor": "BROWN",
+    "location": {
+      "x": 55.0,
+      "y": 2003,
+      "z": 666,
+      "name": "dvv"
     }
   }
 ]

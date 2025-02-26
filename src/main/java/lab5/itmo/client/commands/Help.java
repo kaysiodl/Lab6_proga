@@ -19,6 +19,10 @@ public class Help extends Command{
 
     @Override
     public boolean apply(String[] args) throws ExecutionError {
+        if (args.length > 0) {
+            throw new ExecutionError("This command does not accept any arguments.");
+        }
+
         List<Command> commands = commandManager.getCommands();
         for (Command command: commands){
             try{

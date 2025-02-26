@@ -25,7 +25,7 @@ public class Person extends Element implements Validatable, Comparable<Element> 
     private static int idCounter = 1;
 
     public Person(String name, Coordinates coordinates,
-                  int height, Color eyeColor, Color hairColor,
+                  float height, Color eyeColor, Color hairColor,
                   Country nationality, Location location){
         this.id = idCounter++;
         this.name = name;
@@ -123,8 +123,7 @@ public class Person extends Element implements Validatable, Comparable<Element> 
     @Override
     public String toString() {
         return "Person {" +
-                "\n  id=" + id +
-                ",\n  name='" + name + '\'' +
+                "\n  name='" + name + '\'' +
                 ",\n  coordinates=" + coordinates +
                 ",\n  creationDate=" + creationDate +
                 ",\n  height=" + height +

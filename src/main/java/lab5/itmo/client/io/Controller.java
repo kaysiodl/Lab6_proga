@@ -7,6 +7,7 @@ import lab5.itmo.exceptions.ExecutionError;
 import lab5.itmo.exceptions.NotFoundCommandException;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Controller {
     private final StandartConsole console;
@@ -51,12 +52,26 @@ public class Controller {
 
     private boolean parseInput(String input) throws ExecutionError, NotFoundCommandException {
         String[] data = input.split(" ");
-        String commandName = data[0];
+        String commandName;
+        if (data.length>=2 && (Objects.equals(data[1], "id") && Objects.equals(data[0], "update") || Objects.equals(data[1], "null")
+                && Objects.equals(data[0], "insert"))){
+            commandName = data[0] + " " + data[1];
+        }
+        else{
+            commandName = data[0];
+        }
+        if (commandName.equals("update id") && data.length < 3) {
+            throw new ExecutionError("Missing argument for 'update id'.");
+        }
+        if (commandName.equals("insert null") && data.length < 3) {
+            throw new ExecutionError("Missing argument for 'insert null'.");
+        }
         Command command = commandManager.getCommand(commandName);
         if (command == null) {
             throw new NotFoundCommandException("Command '" + commandName + "' is not found.");
         }
         commandManager.addToHistory(command);
-        return command.apply(Arrays.copyOfRange(data, 1, data.length));
+        String[] args = data.length > 1 ? Arrays.copyOfRange(data, 1, data.length) : new String[0];
+        return command.apply(args);
     }
 }

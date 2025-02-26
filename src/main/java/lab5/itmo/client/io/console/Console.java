@@ -13,4 +13,6 @@ public interface Console {
     void selectFileScanner(Scanner obj);
 
     void selectConsoleScanner();
+
+    void printError(String error);
 }

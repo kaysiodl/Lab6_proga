@@ -14,7 +14,6 @@ import java.time.ZonedDateTime;
 import java.util.*;
 
 public class CollectionManager{
-
     private final IdGenerator idGenerator = new IdGenerator();
 
     private Map<Integer, Person> collection = new LinkedHashMap<Integer, Person>();
@@ -45,7 +44,17 @@ public class CollectionManager{
         System.out.println("New element added to collection successfully. ");
     }
 
-    private boolean isIdFree(Integer id) {
+    public void add(Person person, Integer id) throws NullFieldException {
+        person.setId(id);
+        if (person.getCreationDate() == null) {
+            person.setCreationDate(ZonedDateTime.now(ZoneId.systemDefault()));
+        }
+        person.validate();
+        collection.put(id, person);
+        System.out.println("New element added to collection successfully. ");
+    }
+
+    public boolean isIdFree(Integer id) {
         for(Person person: collection.values()){
             if (Objects.equals(id, person.getId())) return false;
         }
@@ -78,26 +87,21 @@ public class CollectionManager{
         }
     }
 
-    public List sort(){
+    public List<Integer> sort(){
         List<Integer> sortedList = new ArrayList<>(collection.keySet());
         Collections.sort(sortedList);
         return sortedList;
     }
 
-
-    public boolean removeById(Integer id) {
-        if (id == null) {
-            throw new IllegalArgumentException("ID cannot be null.");
+    public Person getById(Integer id) {
+        for (Person person : collection.values()) {
+            if (Objects.equals(person.getId(), id)) return person;
         }
+        return null;
+    }
 
-        if (collection.containsKey(id)) {
-            collection.remove(id);
-            System.out.println("Element with id " + id + " has been removed.");
-            return true;
-        } else {
-            System.out.println("Element with id " + id + " not found.");
-            return false;
-        }
+    public void removeById(Integer id) {
+        collection.remove(getById(id));
     }
 
     public boolean removeAll() {
@@ -120,11 +124,20 @@ public class CollectionManager{
     @Override
     public String toString() {
         if (collection.isEmpty()) {
-            return " Collection is empty.";
+            return "Collection is empty.";
         }
-        System.out.println(collection);
-        StringBuilder string = new StringBuilder();
-        return string.toString().trim();
+
+        StringBuilder stringBuilder = new StringBuilder();
+        for (Map.Entry<Integer, Person> entry : collection.entrySet()) {
+            int key = entry.getKey();
+            Person person = entry.getValue();
+            stringBuilder.append(key)
+                    .append(": ")
+                    .append(person)
+                    .append("\n");
+        }
+
+        return stringBuilder.toString().trim();
     }
 
 }

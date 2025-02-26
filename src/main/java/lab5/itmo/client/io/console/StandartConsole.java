@@ -35,4 +35,6 @@ public class StandartConsole implements Console{
         this.fileScanner = null;
     }
 
+    @Override
+    public void printError(String error){System.out.println(error);}
 }

@@ -23,7 +23,6 @@ public abstract class Command {
 
     public abstract boolean apply(String[] args) throws ExecutionError;
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
