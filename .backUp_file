@@ -1,0 +1,158 @@
+[
+  {
+    "id": 2,
+    "name": "fghj",
+    "coordinates": {
+      "x": 876543,
+      "y": 34567890
+    },
+    "creationDate": {
+      "dateTime": {
+        "date": {
+          "year": 2025,
+          "month": 5,
+          "day": 6
+        },
+        "time": {
+          "hour": 5,
+          "minute": 3,
+          "second": 14,
+          "nano": 709523400
+        }
+      },
+      "offset": {
+        "totalSeconds": 10800
+      },
+      "zone": {
+        "id": "Europe/Moscow"
+      }
+    },
+    "height": 1.0E31,
+    "eyeColor": "GREEN",
+    "hairColor": "GREEN",
+    "nationality": "SPAIN",
+    "location": {
+      "x": 7777.0,
+      "y": 45678,
+      "z": 3456789,
+      "name": "erghjkl"
+    }
+  },
+  {
+    "id": 3,
+    "name": "person_7983",
+    "coordinates": {
+      "x": 93112,
+      "y": 93112
+    },
+    "creationDate": {
+      "dateTime": {
+        "date": {
+          "year": 2025,
+          "month": 5,
+          "day": 6
+        },
+        "time": {
+          "hour": 5,
+          "minute": 3,
+          "second": 14,
+          "nano": 716527900
+        }
+      },
+      "offset": {
+        "totalSeconds": 10800
+      },
+      "zone": {
+        "id": "Europe/Moscow"
+      }
+    },
+    "height": 93112.0,
+    "eyeColor": "BLUE",
+    "hairColor": "WHITE",
+    "nationality": "FRANCE",
+    "location": {
+      "x": 93112.0,
+      "y": 93112,
+      "z": 93112,
+      "name": "location_93112"
+    }
+  },
+  {
+    "id": 1,
+    "name": "fghj",
+    "coordinates": {
+      "x": 1,
+      "y": 1
+    },
+    "creationDate": {
+      "dateTime": {
+        "date": {
+          "year": 2025,
+          "month": 5,
+          "day": 6
+        },
+        "time": {
+          "hour": 5,
+          "minute": 3,
+          "second": 14,
+          "nano": 717530400
+        }
+      },
+      "offset": {
+        "totalSeconds": 10800
+      },
+      "zone": {
+        "id": "Europe/Moscow"
+      }
+    },
+    "height": 1.0,
+    "eyeColor": "BROWN",
+    "hairColor": "BLUE",
+    "nationality": "SPAIN",
+    "location": {
+      "x": 456789.0,
+      "y": 22,
+      "z": 233,
+      "name": "wjgdui"
+    }
+  },
+  {
+    "id": 5,
+    "name": "ksjhdg",
+    "coordinates": {
+      "x": 4,
+      "y": 4
+    },
+    "creationDate": {
+      "dateTime": {
+        "date": {
+          "year": 2025,
+          "month": 5,
+          "day": 6
+        },
+        "time": {
+          "hour": 5,
+          "minute": 3,
+          "second": 58,
+          "nano": 870045400
+        }
+      },
+      "offset": {
+        "totalSeconds": 10800
+      },
+      "zone": {
+        "id": "Europe/Moscow"
+      }
+    },
+    "height": 4.0,
+    "eyeColor": "BLUE",
+    "hairColor": "BLUE",
+    "nationality": "SPAIN",
+    "location": {
+      "x": 5.0,
+      "y": 8,
+      "z": 8,
+      "name": "ghhhj"
+    }
+  }
+]
